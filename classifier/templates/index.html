@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% load staticfiles %}
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SpamKiller Login</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/form-elements.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/please-wait.css' %}">
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="{% static '/ico/favicon.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static '/ico/apple-touch-icon-144-precomposed.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static '/ico/apple-touch-icon-114-precomposed.png' %}">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static '/ico/apple-touch-icon-72-precomposed.png' %}">
+        <link rel="apple-touch-icon-precomposed" href="{% static '/ico/apple-touch-icon-57-precomposed.png' %}">
+
+    </head>
+
+    <body>
+
+        <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1><strong>SpamKiller</strong> Login Form</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3>Login to our site</h3>
+                            		<p>Enter your <strong>Gmail</strong> username and password to log on:</p>
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-key"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+			                    <div>
+			                    	<div class="form-group">
+			                    		<label class="sr-only" for="form-username">Username</label>
+			                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
+			                        </div>
+			                        <div class="form-group">
+			                        	<label class="sr-only" for="form-password">Password</label>
+			                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+			                        </div>
+			                        <button id="login-button" class="btn">Sign in!</button>
+			                    </div>
+		                    </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            
+        </div>
+
+         							<!-- Success Modal-->
+                                    <div class="modal fade" id="success" role="dialog">
+                                        <div class="modal-dialog">
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button class="close" data-dismiss="modal" type=
+                                                    "button">&times;</button>
+
+                                                    <h4 class="modal-title">Success</h4>
+                                                </div>
+
+
+                                                <div class="modal-body">
+                                                    <p>Login Complete!</p>
+                                                </div>
+
+
+                                                <div class="modal-footer">
+                                                    <button class="btn btn-default" data-dismiss="modal" type=
+                                                    "button">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--ends success modal -->
+
+
+                                    <!-- Failure modal -->
+                                    <div class="modal fade" id="failure" role="dialog">
+                                        <div class="modal-dialog">
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button class="close" data-dismiss="modal" type=
+                                                    "button">&times;</button>
+
+                                                    <h4 class="modal-title">Error</h4>
+                                                </div>
+
+
+                                                <div class="modal-body">
+                                                    <p>Login failed. Wrong e-mail/pass maybe?</p>
+                                                </div>
+
+
+                                                <div class="modal-footer">
+                                                    <button class="btn btn-default" data-dismiss="modal" type=
+                                                    "button">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ends failure modal -->
+
+        <!-- Javascript -->
+        <script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/jquery.backstretch.min.js' %}"></script>
+        <script src="{% static 'js/scripts.js' %}"></script>
+        <script src="{% static 'js/please-wait.js' %}"></script>
+        
+
+    </body>
+
+</html>
